@@ -1,0 +1,47 @@
+@import '_var.scss';
+
+.category-page {
+
+    .container {
+        // gap: 40px;
+        
+        .page-card {
+
+            .sub-category-form {
+                overflow: hidden;
+                height: fit-content;
+                max-height: 0vh;
+                transition: 0.3s ease-in-out;
+                opacity: 0;
+                pointer-events: none;
+                                
+                &.show {
+                    max-height: 100vh;
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+            
+            .table-container {
+                
+                th, td {
+                    
+                    span {
+                        // max-width: 150px;
+                        
+
+                        div {
+                            width: 100%;
+                            height: fit-content;
+                            white-space: pre-wrap;
+                            word-wrap: break-word;
+                        }
+                    }
+                    
+                }
+            }
+
+
+        }
+    }
+}

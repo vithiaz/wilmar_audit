@@ -1,0 +1,21 @@
+.category-page .container .page-card .sub-category-form {
+  overflow: hidden;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 0vh;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+.category-page .container .page-card .sub-category-form.show {
+  max-height: 100vh;
+  opacity: 1;
+  pointer-events: all;
+}
+.category-page .container .page-card .table-container th span div, .category-page .container .page-card .table-container td span div {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}/*# sourceMappingURL=category-page.css.map */

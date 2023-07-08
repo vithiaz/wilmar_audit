@@ -1,0 +1,54 @@
+@startuml
+
+
+entity users {
+    * id UID PRIMARY_KEY
+    --
+    * name STRING
+    * user_type STRING
+    ' admin
+    ' auditor
+    * email STRING UNIQUE
+    * password STRING
+    --
+    * created_at DATE
+    * updated_at DATE
+}
+
+entity categories {
+    * id UID PRIMARY_KEY
+    --
+    * name STRING
+    description TEXT
+    --
+    * created_at DATE
+    * updated_at DATE
+}
+
+entity sub_categories {
+    * id UID PRIMARY_KEY
+    --
+    * name TEXT
+    * category_id FOUREIGN(categories.id)
+    --
+    * created_at DATE
+    * updated_at DATE
+}
+
+entity audits {
+    * id UID PRIMARY_KEY
+    --
+    * audit_date DATE
+    * picture STRING
+    description TEXT
+    --
+    sub_category_id UID FOUREIGN(sub_categories.id)
+    --
+    * created_at DATE
+    * updated_at DATE
+}
+
+categories ||--o{ sub_categories
+audits }o--|| sub_categories
+
+@enduml

@@ -1,0 +1,16 @@
+@import '_var.scss';
+
+.users-page {
+
+    .container {
+
+        .page-card {
+
+            .form-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    }
+}

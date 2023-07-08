@@ -1,0 +1,37 @@
+.audit-report-page .container .page-card .sub-category-form {
+  overflow: hidden;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 0vh;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+.audit-report-page .container .page-card .sub-category-form.show {
+  max-height: 100vh;
+  opacity: 1;
+  pointer-events: all;
+}
+.audit-report-page .container .page-card .date-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.audit-report-page .container .page-card .date-container .title {
+  color: black;
+  font-weight: 600;
+}
+.audit-report-page .container .page-card .date-container .row-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 5px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.audit-report-page .container .page-card .date-container .row-wrapper .input-container {
+  width: 320px;
+}/*# sourceMappingURL=audit-report-page.css.map */

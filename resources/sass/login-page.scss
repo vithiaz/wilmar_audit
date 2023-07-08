@@ -1,0 +1,60 @@
+@import '_var.scss';
+
+.login-page {
+
+    .container {
+
+        section.login {
+            height: 100vh;
+            min-height: fit-content;
+            display: grid;
+            place-items: center;
+
+            .login-card-container {
+                width: 100%;
+                max-width: 420px;
+                border-radius: 8px;
+                background-color: white;
+                border: none;
+                
+                .login-card-header {
+                    padding: 20px 10px;
+                    display: grid;
+                    place-items: center;
+                    
+                    h1 {
+                        font-weight: 600;
+                        font-size: 1.2rem;
+                        letter-spacing: 2px;
+                    }
+                }
+
+                .login-card-body {
+                    padding: 10px 20px;
+                }
+
+                .button-container {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    align-items: flex-end;
+
+                    .login-button {
+                        @include base-button($PrimaryGreen, white, white, $PrimaryGreen);
+                        width: 50%;
+
+                        &:hover {
+                            border: 1px solid $PrimaryGreen;
+                        }
+
+
+                    }
+                }
+
+            }
+            
+
+        }
+    }
+}

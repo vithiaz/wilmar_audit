@@ -1,0 +1,5 @@
+.users-page .container .page-card .form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}/*# sourceMappingURL=users-page.css.map */
