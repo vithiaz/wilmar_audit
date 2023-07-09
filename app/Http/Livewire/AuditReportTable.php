@@ -76,19 +76,24 @@ final class AuditReportTable extends PowerGridComponent
 
     public function datasource(): Builder
     {
-        if ($this->end_date) {
-            $builder = Audits::with([
-                'category',
-                'sub_category',
-            ])->where([
+        $builder = Audits::with([
+            'category',
+            'sub_category',
+        ]);
+
+        if ($this->start_date && $this->end_date) {
+            $queryBuilder = $builder->where([
                 ['audit_date', '>=', $this->start_date],
                 ['audit_date', '<=', $this->end_date],
             ]);
+        }
+        else if ($this->start_date) {
+            $queryBuilder = $builder->where('audit_date', '>=', $this->start_date);
+        }
+        else if ($this->end_date) {
+            $queryBuilder = $builder->where('audit_date', '<=', $this->end_date);
         } else {
-            $builder = Audits::with([
-                'category',
-                'sub_category',
-            ])->where('audit_date', '>=', $this->start_date);
+            $queryBuilder = $builder;
         }
 
         return $builder;

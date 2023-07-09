@@ -526,7 +526,7 @@ main {
   background-color: #363636;
 }
 .sidebar .content .auth .logout-button:hover i {
-  color: #F9D00F;
+  color: #aa685d;
 }
 .sidebar .content .auth::before {
   content: "";
@@ -814,6 +814,14 @@ main {
 }
 @media screen and (max-width: 630px) {
   .admin-navbar .container {
+    padding-left: 40px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .layout-content .page-content .container {
+    padding-left: 25px;
+  }
+  .navbar .container {
     padding-left: 40px;
   }
 }

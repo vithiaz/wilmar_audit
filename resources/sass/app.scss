@@ -595,7 +595,7 @@ main {
                     background-color: lighten($PrimaryBlack, 10%);
 
                     i {
-                        color: $LightenOrange;
+                        color: $PrimaryRed;
                     }
                 }
             }
@@ -925,6 +925,26 @@ main {
         }
     }
 }
+
+@media screen and (max-width: 575px) {
+    .layout-content {
+
+        .page-content {
+            
+            .container{
+                padding-left: 25px;
+                
+            }
+        }
+    }
+    .navbar {
+        
+        .container {
+            padding-left: 40px;
+        }
+    }
+}
+
 
 @media screen and (max-width: 460px) {
     .admin-navbar {
