@@ -17,6 +17,7 @@ class Audits extends Model
         'audit_date',
         'picture',
         'description',
+        'rating',
         'sub_category_id',
     ];
 

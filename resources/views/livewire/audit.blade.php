@@ -59,6 +59,22 @@
                             @enderror
                         </div>
                     </div>
+                    
+                    <div class="form-input-wrapper row">
+                        <span class="form-title">Rating</span>
+                        <div class="form-items">
+                            <select wire:model='rating' id="input-category-select">
+                                <option value="" selected hidden>Pilih rating</option>
+                                <option value="C">C - CONFORMANCE</option>
+                                <option value="PC">PC - PARTIAL CONFORMANCE</option>
+                                <option value="NC">NC - NON-CONFORMANCE</option>
+                            </select>
+                            @error('sub_category')
+                                <small class="error">{{ $message }}</small>
+                            @enderror
+                        </div>
+                    </div>
+
                     <div class="form-input-wrapper column">
                         <span class="form-title">Deskripsi</span>
                         <div class="form-items">

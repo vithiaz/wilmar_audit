@@ -41,6 +41,7 @@ entity audits {
     * audit_date DATE
     * picture STRING
     description TEXT
+    rating STRING
     --
     sub_category_id UID FOUREIGN(sub_categories.id)
     --

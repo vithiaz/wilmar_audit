@@ -140,6 +140,7 @@ final class AuditReportTable extends PowerGridComponent
             ->addColumn('audit_date_formatted', fn (Audits $model) => Carbon::parse($model->audit_date)->format('d/m/Y'))
             ->addColumn('description')
             ->addColumn('picture')
+            ->addColumn('rating')
             ->addColumn('category', fn(Audits $model) => $model->category ? $model->category->name : '')
             ->addColumn('sub_category', fn(Audits $model) => $model->sub_category ? $model->sub_category->name : '')
             ->addColumn('created_at')
@@ -169,23 +170,25 @@ final class AuditReportTable extends PowerGridComponent
                 ->sortable(),
             
             Column::make('Tanggal', 'audit_date_formatted', 'audit_date')
-
-            
                 ->searchable()
                 ->sortable(),
             
             Column::make('Kategori', 'category')
                 ->searchable(),
-            
+                
             Column::make('Sub Kategori', 'sub_category')
                 ->searchable(),
-            
+                
             Column::make('Deskripsi Audit', 'description')
                 ->searchable(),
 
             Column::make('Created at', 'created_at')
                 ->hidden(),
 
+            Column::make('Rating', 'rating')
+                ->sortable()
+                ->searchable(),
+            
             Column::make('Created at', 'created_at_formatted', 'created_at')
                 ->searchable()
                 ->hidden()

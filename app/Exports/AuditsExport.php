@@ -34,6 +34,7 @@ class AuditsExport implements FromQuery, WithMapping, WithColumnWidths, WithStyl
             'Kategori',
             'Sub Kategori',
             'Deskripsi',
+            'Rating',
         ];
     }
 
@@ -45,6 +46,7 @@ class AuditsExport implements FromQuery, WithMapping, WithColumnWidths, WithStyl
             $audit->category ? $audit->category->name : '',
             $audit->sub_category ? $audit->sub_category->name : '',
             $audit->description,
+            $audit->rating,
         ];
     }
 
@@ -55,6 +57,7 @@ class AuditsExport implements FromQuery, WithMapping, WithColumnWidths, WithStyl
             'B' => 30,
             'C' => 40,
             'D' => 40,
+            'E' => 10,
         ];
     }
 
@@ -75,6 +78,7 @@ class AuditsExport implements FromQuery, WithMapping, WithColumnWidths, WithStyl
         $sheet->getStyle('B2:B'.$lastRow)->getAlignment()->setHorizontal('left')->setVertical('top');
         $sheet->getStyle('C2:C'.$lastRow)->getAlignment()->setHorizontal('left')->setVertical('top');
         $sheet->getStyle('D2:D'.$lastRow)->getAlignment()->setHorizontal('left')->setVertical('top');
+        $sheet->getStyle('E2:E'.$lastRow)->getAlignment()->setHorizontal('center')->setVertical('top');
         
         
         // Note

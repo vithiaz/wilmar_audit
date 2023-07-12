@@ -17,6 +17,7 @@ class Audit extends Component
     public $category;
     public $sub_category;
     public $image;
+    public $rating;
     public $description;
 
     // Model Variable
@@ -58,6 +59,7 @@ class Audit extends Component
 
         $Audit = new Audits;
         $Audit->audit_date = $this->audit_date;
+        $Audit->rating = $this->rating;
         $Audit->description = $this->description;
         if ($this->sub_category) {
             $Audit->sub_category_id = $this->sub_category;
@@ -77,6 +79,7 @@ class Audit extends Component
         $this->category = '';
         $this->sub_category = '';
         $this->image = '';
+        $this->rating = '';
         $this->description = '';
     }
 }
